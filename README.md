@@ -2,6 +2,19 @@
 
 For Week 3, you will be developing smart contracts using REMIX IDE and Rinkeby Testing network. Week 3 will consist of four projects you can work on. I recommend you complete at least two projects. Or if you are feeling confident you can complete all the projects. 
 
+### Setup
+1. Clone this repository by running `git clone https://github.com/sparklearnedtech/bdb2022-week3.git`.
+2. Create your own branch using this format (firstname-lastname), checkout, and make sure you are not on main branch.
+	```
+	git branch john-doe    // create branch using firstname-lastname format
+	git checkout john-doe  // checkout on newly created branch
+	git branch             // check and make sure you are currently on your john-doe branch, not main
+	```
+3. You are given an initial file that you can initially work on and at the end of the project you will arrive at a working code. The initial file is located inside the `/contract` folder. Then look for the `/set-1` folder if you are following the Altcoin track, or look for the `/set-2` folder if you are following the NFT track.
+4. You can use [REMIXD](https://remix-ide.readthedocs.io/en/latest/remixd.html), a popular extension of the REMIX IDE where in you can connect directly to your local storage and start coding. Or if you are not confident, you can manually copy paste the smart contract code to REMIX IDE, then paste it back to your local repository whenever you are done coding. This way you can still commit your changes to GitHub and have it checked by the mentors.
+5. Once you're done, just message [@aldrickb](https://github.com/aldrickb) on Slack, and he will check your branch and your deployed contract on Rinkeby.
+
+
 ## Projects
 
 Week 3 will compose of four projects in total.
@@ -12,16 +25,6 @@ Week 3 will compose of four projects in total.
 4. **INO Project** (Set 2)
 
 It is recommended to complete 1 set of project for this week. You can follow the Altcoin track where in you will develop your own ERC-20 token and sell it with your IDO contract. Or you can follow the NFT Project where in you will develop your own ERC-721 token and sell it with your INO contract
-
-
-### Setup
-You are given an initial file that you can initially work on and at the end of the project you will arrive at a working code. After that you need to deploy it to Rinkeby Explorer so that we can check your work.
-
-Clone or download zip this repository to your local device to get started.
-
-The initial file is located inside the contract folder. Then look for the "set-1" folder if you are following the Altcoin track, or look for the "set-2" folder if you are following the NFT track.
-
-You can use [REMIXD](https://remix-ide.readthedocs.io/en/latest/remixd.html), a popular extension of the REMIX IDE where in you can connect directly to your local storage and start coding. Or if you are not confident, you can manually copy paste the smart contract code to REMIX IDE, then paste it back to your local repository whenever you are done coding. This way you can still commit your changes to GitHub and have it checked by the mentors.
 
 ## Altcoin Project
 ##### /contract/set-1/ERC20.sol
