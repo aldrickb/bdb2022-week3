@@ -1030,5 +1030,26 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata, Ownable {
 }
 
 contract MyNFT is ERC721 {
+    mapping(uint256 => string) private _tokenURI;
+    constructor (string memory name_,string memory symbol_) ERC721 (name_, symbol_){
+
+    }
+
+    function _baseURI() internal pure override returns (string memory){
+        return "https://ipfs.io/ipfs/";
+    }
+
+    function mint(uint256 _tokenID, string memory _uri) public onlyOwner{
+        require(!_exists(_tokenID));
+        _mint(_msgSender(), _tokenID);
+        _tokenURI[_tokenID] = _uri; //save token uri for individual tokens
+    }
+
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+
+        string memory baseURI = _baseURI();
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, _tokenURI[tokenId])) : "";
+    }
 
 }
